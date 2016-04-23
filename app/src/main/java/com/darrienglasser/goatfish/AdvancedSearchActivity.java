@@ -25,6 +25,11 @@ public class AdvancedSearchActivity extends AppCompatActivity {
      */
     private EditText mGearView;
 
+    /**
+     * Country.
+     */
+    private EditText mCountryView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +40,7 @@ public class AdvancedSearchActivity extends AppCompatActivity {
         mLetteringView = (EditText) findViewById(R.id.lettering_view);
         mPermitView = (EditText) findViewById(R.id.permit_view);
         mGearView = (EditText) findViewById(R.id.gear_view);
+        mCountryView = (EditText) findViewById(R.id.flagView);
 
         View v = findViewById(R.id.forward_button);
         if (v != null)
@@ -55,7 +61,8 @@ public class AdvancedSearchActivity extends AppCompatActivity {
         SearchDataContainer container = new SearchDataContainer(
                 mLetteringView.getText().toString(),
                 mPermitView.getText().toString(),
-                mGearView.getText().toString()
+                mGearView.getText().toString(),
+                mCountryView.getText().toString()
         );
 
         Intent intent = new Intent(AdvancedSearchActivity.this, ResultsActivity.class);

@@ -1,26 +1,45 @@
 package com.darrienglasser.goatfish;
 
 public class Vessel {
-    /** IMO. */
-    private String id_num;
-
+    /** Country. */
+    private String flag;
+    /** Vessel name. */
     private String name;
-    private String Uvi;
-    private String pictureUrl;
-    private int size;
-    private String radioCallClass;
-    private Permit permit;
+    /** IMO. */
+    private String imo;
+    /** Unique Vessel Identifier. */
+    private String uvi;
+    /** Year. */
+    private String year;
+    /** Length of boat. */
+    private String length;
+    /** Length units. */
+    private String lengthUnits;
+    /** Tonnage of boat. */
+    private String tonnage;
+    /** Tonnage type. */
+    private String tonnageType;
 
-    public Vessel(String name) {
+    public Vessel(
+            String flag,
+            String name,
+            String imo,
+            String uvi,
+            String year,
+            String length,
+            String lengthUnits,
+            String tonnage,
+            String tonnageType) {
+        
+        this.flag = flag;
         this.name = name;
-    }
-
-    public String getId_num() {
-        return id_num;
-    }
-
-    public void setId_num(String id_num) {
-        this.id_num = id_num;
+        this.imo = imo;
+        this.uvi = uvi;
+        this.year = year;
+        this.length = length;
+        this.lengthUnits = lengthUnits;
+        this.tonnage = tonnage;
+        this.tonnageType = tonnageType;
     }
 
     public String getName() {
@@ -31,43 +50,67 @@ public class Vessel {
         this.name = name;
     }
 
+    public String getImo() {
+        return imo;
+    }
+
+    public void setImo(String imo) {
+        this.imo = imo;
+    }
+
     public String getUvi() {
-        return Uvi;
+        return uvi;
     }
 
     public void setUvi(String uvi) {
-        Uvi = uvi;
+        this.uvi = uvi;
     }
 
-    public String getPictureUrl() {
-        return pictureUrl;
+    public String getFlag() {
+        return flag;
     }
 
-    public void setPictureUrl(String pictureUrl) {
-        this.pictureUrl = pictureUrl;
+    public void setFlag(String flag) {
+        this.flag = flag;
     }
 
-    public int getSize() {
-        return size;
+    public String getYear() {
+        return year;
     }
 
-    public void setSize(int size) {
-        this.size = size;
+    public void setYear(String year) {
+        this.year = year;
     }
 
-    public String getRadioCallClass() {
-        return radioCallClass;
+    public String getLength() {
+        return length;
     }
 
-    public void setRadioCallClass(String radioCallClass) {
-        this.radioCallClass = radioCallClass;
+    public void setLength(String length) {
+        this.length = length;
     }
 
-    public Permit getPermit() {
-        return permit;
+    public String getLengthUnits() {
+        return lengthUnits;
     }
 
-    public void setPermit(Permit permit) {
-        this.permit = permit;
+    public void setLengthUnits(String lengthUnits) {
+        this.lengthUnits = lengthUnits;
+    }
+
+    public String getTonnage() {
+        return tonnage;
+    }
+
+    public void setTonnage(String tonnage) {
+        this.tonnage = tonnage;
+    }
+
+    public String getTonnageType() {
+        return tonnageType;
+    }
+
+    public void setTonnageType(String tonnageType) {
+        this.tonnageType = tonnageType;
     }
 }

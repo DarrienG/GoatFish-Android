@@ -9,6 +9,7 @@ public class SearchDataContainer implements Serializable {
     private String mName;
     private String mUvi;
     private String mImo;
+    private String mCountry;
 
 
     public SearchDataContainer(){}
@@ -16,11 +17,13 @@ public class SearchDataContainer implements Serializable {
     public SearchDataContainer(
             String permit,
             String gear,
-            String location) {
+            String location,
+            String country) {
 
         this.mName = permit;
         this.mUvi = gear;
         this.mImo = location;
+        mCountry = country;
     }
 
     public String getName() {
@@ -39,8 +42,20 @@ public class SearchDataContainer implements Serializable {
         this.mUvi = Uvi;
     }
 
-    public String getGear() {
-        return mUvi;
+    public String getImo() {
+        return mImo;
+    }
+
+    public void setImo(String imo) {
+        mImo = imo;
+    }
+
+    public String getCountry() {
+        return mCountry;
+    }
+
+    public void setCountry(String country) {
+        mCountry = country;
     }
 
     public void setGear(String gear) {
