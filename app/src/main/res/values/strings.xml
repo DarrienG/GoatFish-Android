@@ -13,4 +13,7 @@
     <string name="permit_text">Permit Info</string>
     <string name="gear_text">Gear/Equipment</string>
     <string name="area_text">Area of Registration</string>
+
+    <!-- Data intent retrieval strings. -->
+    <string name="search_data">search_data</string>
 </resources>

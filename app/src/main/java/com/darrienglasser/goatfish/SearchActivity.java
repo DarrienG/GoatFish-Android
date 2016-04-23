@@ -39,6 +39,20 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
 
+        mSearchBar.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Intent intent = new Intent(SearchActivity.this, ResultsActivity.class);
+                startActivity(intent);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+
         mAdvancedSearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
