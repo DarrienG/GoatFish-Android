@@ -17,7 +17,6 @@ public class SearchActivity extends AppCompatActivity {
      * Main search bar.
      */
     SearchView mSearchBar;
-
     /**
      * Button used to bring user to advanced search screen.
      */
@@ -31,7 +30,7 @@ public class SearchActivity extends AppCompatActivity {
         mSearchBar = (SearchView) findViewById(R.id.search_view);
         mSearchBar.setQueryHint(getString(R.string.search_field));
         mAdvancedSearchButton = findViewById(R.id.advanced_search_button);
-
+        setTitle(getString(R.string.title_bar_name));
         mSearchContainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +43,7 @@ public class SearchActivity extends AppCompatActivity {
             public boolean onQueryTextSubmit(String query) {
                 Intent intent = new Intent(SearchActivity.this, ResultsActivity.class);
                 startActivity(intent);
+                finish();
                 return false;
             }
 
@@ -60,8 +60,5 @@ public class SearchActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
-
-
 }

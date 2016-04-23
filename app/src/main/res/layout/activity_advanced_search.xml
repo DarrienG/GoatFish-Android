@@ -25,44 +25,12 @@
                 android:layout_height="wrap_content">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/radio_call_sign_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/radio_text"
-                    android:drawableStart="@drawable/ic_radio_icon"
-                    android:drawableLeft="@drawable/ic_radio_icon"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <android.support.design.widget.TextInputEditText
                     android:id="@+id/lettering_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/lettering_text"
                     android:drawableStart="@drawable/ic_boat_lettering_icon"
                     android:drawableLeft="@drawable/ic_boat_lettering_icon"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/owner_id_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/owner_text"
-                    android:drawableStart="@drawable/ic_owner_profile_icon"
-                    android:drawableLeft="@drawable/ic_owner_profile_icon"
                     android:maxLines="1"
                     android:singleLine="true" />
 
@@ -104,22 +72,23 @@
                 android:layout_height="wrap_content">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/area_view"
+                    android:id="@+id/flagView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/area_text"
-                    android:drawableStart="@drawable/ic_area_icon"
-                    android:drawableLeft="@drawable/ic_area_icon"
+                    android:hint="@string/country_text"
+                    android:drawableStart="@drawable/ic_flag_icon"
+                    android:drawableLeft="@drawable/ic_flag_icon"
                     android:maxLines="1"
                     android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
+
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/forward_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_margin="40dp"
+                android:layout_marginTop="175dp"
                 android:clickable="true"
                 android:src="@drawable/ic_forward_icon" />
 

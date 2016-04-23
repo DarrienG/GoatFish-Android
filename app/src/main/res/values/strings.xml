@@ -1,18 +1,17 @@
 <resources>
     <!-- Main search activity strings -->
-    <string name="app_name">GoatFish</string>
-    <string name="search_field">Permit info, area, etc.</string>
+    <string name="app_name">SUSHEE</string>
+    <string name="search_field">Quick search with name</string>
     <string name="helper_text">Advanced Search</string>
     <string name="specifier_text">General search not specific enough?</string>
+    <string name="title_bar_name">SUSHEE</string>
 
     <!-- Advanced search strings -->
     <string name="advanced_search">Advanced Search</string>
-    <string name="radio_text">Radio Call Sign</string>
-    <string name="lettering_text">Lettering/Numbering</string>
-    <string name="owner_text">Owner ID</string>
-    <string name="permit_text">Permit Info</string>
-    <string name="gear_text">Gear/Equipment</string>
-    <string name="area_text">Area of Registration</string>
+    <string name="lettering_text">Vessel Name</string>
+    <string name="permit_text">Universal Vessel Identifier</string>
+    <string name="gear_text">IMO Number</string>
+    <string name="country_text">Country</string>
 
     <!-- Data intent retrieval strings. -->
     <string name="search_data">search_data</string>

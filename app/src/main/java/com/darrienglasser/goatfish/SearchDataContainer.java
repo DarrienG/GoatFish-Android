@@ -6,77 +6,44 @@ import java.io.Serializable;
  * Basic POJO. Used to hold strings when passing between intents.
  */
 public class SearchDataContainer implements Serializable {
-    private String mRadio;
-    private String mLettering;
-    private String mOwnerId;
-    private String mPermit;
-    private String mGear;
-    private String mLocation;
+    private String mName;
+    private String mUvi;
+    private String mImo;
 
 
     public SearchDataContainer(){}
 
     public SearchDataContainer(
-            String radio,
-            String lettering,
-            String ownerId,
             String permit,
             String gear,
             String location) {
 
-        this.mRadio = radio;
-        this.mLettering = lettering;
-        this.mOwnerId = ownerId;
-        this.mPermit = permit;
-        this.mGear = gear;
-        this.mLocation = location;
+        this.mName = permit;
+        this.mUvi = gear;
+        this.mImo = location;
     }
 
-    public String getLocation() {
-        return mLocation;
+    public String getName() {
+        return mName;
     }
 
-    public void setLocation(String location) {
-        this.mLocation = location;
+    public void setName(String name) {
+        this.mName= name;
     }
 
-    public String getRadio() {
-        return mRadio;
+    public String getUvi() {
+        return mUvi;
     }
 
-    public void setRadio(String radio) {
-        this.mRadio = radio;
-    }
-
-    public String getLettering() {
-        return mLettering;
-    }
-
-    public void setLettering(String lettering) {
-        this.mLettering = lettering;
-    }
-
-    public String getOwnerId() {
-        return mOwnerId;
-    }
-
-    public void setOwnerId(String ownerId) {
-        this.mOwnerId = ownerId;
-    }
-
-    public String getPermit() {
-        return mPermit;
-    }
-
-    public void setPermit(String permit) {
-        this.mPermit = permit;
+    public void setUvi(String Uvi) {
+        this.mUvi = Uvi;
     }
 
     public String getGear() {
-        return mGear;
+        return mUvi;
     }
 
     public void setGear(String gear) {
-        this.mGear = gear;
+        this.mUvi = gear;
     }
 }
