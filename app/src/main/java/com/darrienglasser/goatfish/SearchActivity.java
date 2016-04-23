@@ -1,5 +1,6 @@
 package com.darrienglasser.goatfish;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
@@ -17,6 +18,11 @@ public class SearchActivity extends AppCompatActivity {
      */
     SearchView mSearchBar;
 
+    /**
+     * Button used to bring user to advanced search screen.
+     */
+    View mAdvancedSearchButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +30,7 @@ public class SearchActivity extends AppCompatActivity {
         mSearchContainer = findViewById(R.id.parent_search_container);
         mSearchBar = (SearchView) findViewById(R.id.search_view);
         mSearchBar.setQueryHint(getString(R.string.search_field));
+        mAdvancedSearchButton = findViewById(R.id.advanced_search_button);
 
         mSearchContainer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +38,15 @@ public class SearchActivity extends AppCompatActivity {
                 mSearchBar.onActionViewExpanded();
             }
         });
+
+        mAdvancedSearchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SearchActivity.this, AdvancedSearchActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
