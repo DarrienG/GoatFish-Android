@@ -13,7 +13,7 @@ public class MockData {
     // Flag : United States of America
     // Inclusion criteria: First 10 entries
     // Source: Western & Central Pacific Fisheries Commission
-    Vessel mV1, mV2, mV3, mV4, mV5, mV6, mV7, mV8, mV9, mV10;
+    Vessel mV1, mV2, mV3, mV4, mV5, mV6, mV7, mV8, mV9, mV10, mV111;
 
     // Flag : United States of America
     // Search name: "Eagle"
@@ -31,10 +31,12 @@ public class MockData {
         ArrayList<Vessel> vessels = new ArrayList<>();
 
          /* Source: Western & Central Pacific Fisheries Commission
-        * https://www.wcpfc.int/record-fishing-vessel-database
+         * https://www.wcpfc.int/record-fishing-vessel-database
          */
 
         // ADELITA, 1994
+        // Image:
+        // https://www.wcpfc.int/system/files/styles/vessel_thumb/private/vessels/WDA6355_Adelita_06.Jun.2013.jpg?itok=-tAC0SsE
         mV1 = new Vessel(
                 "UNITED STATES OF AMERICA",
                 "ADELITA",
@@ -46,7 +48,12 @@ public class MockData {
                 "148.00",
                 "GRT");
 
+        mV1.setVesselType("TUNA LONGLINER");
+        mV1.setOwner("ADELITA FISHING LLC");
+
         // ALANA, 2013
+        // Image:
+        // https://www.wcpfc.int/system/files/styles/vessel_thumb/private/vessels/WDH2943_Alana_24.Jul.2014.jpg?itok=LmCC84oS
         mV2 = new Vessel(
                 "UNITED STATES OF AMERICA",
                 "ALANA",
@@ -58,7 +65,12 @@ public class MockData {
                 "102.00",
                 "GRT");
 
+        mV2.setVesselType("TUNA LONGLINER");
+        mV2.setOwner("KD FISHERY LLC");
+
         // ALISON F, 1997
+        // Image:
+        // https://www.wcpfc.int/system/files/styles/vessel_thumb/private/vessels/WDG4225_Alison%20F_05.Aug.2012.JPG?itok=8gXA09h2
         mV3 = new Vessel(
                 "UNITED STATES OF AMERICA",
                 "ALISON F",
@@ -69,6 +81,9 @@ public class MockData {
                 "FEET",
                 "144.00",
                 "GRT");
+
+        mV3.setVesselType("POLE AND LINE");
+        mV3.setOwner("CHARCA FISH VII LLC");
 
         // AMERICAN EAGLE, 2003
         mV4 = new Vessel(
@@ -82,6 +97,9 @@ public class MockData {
                 "2310.00",
                 "GRT");
 
+        mV4.setVesselType("TUNA PURSE SEINER");
+        mV4.setOwner("AMERICAN EAGLE FISHING LLC");
+
         // AMERICAN ENTERPRISE, 2003
         mV5 = new Vessel(
                 "UNITED STATES OF AMERICA",
@@ -93,6 +111,9 @@ public class MockData {
                 "FEET",
                 "2310.00",
                 "GRT");
+
+        mV5.setVesselType("TUNA PURSE SEINER");
+        mV5.setOwner("AMERICAN ENTERPRISE FISHING LLC");
 
         // AMERICAN VICTORY, 2008
         mV6 = new Vessel(
@@ -106,6 +127,9 @@ public class MockData {
                 "1691.00",
                 "GRT");
 
+        mV6.setVesselType("TUNA PURSE SEINER");
+        mV6.setOwner("AMERICAN LEGACY FISHING LLC");
+
         // ANDREA, 1979
         mV7 = new Vessel(
                 "UNITED STATES OF AMERICA",
@@ -118,17 +142,8 @@ public class MockData {
                 "2232.00",
                 "GRT");
 
-        // AMERICAN VICTORY, 2008
-        mV7 = new Vessel(
-                "UNITED STATES OF AMERICA",
-                "AMERICAN VICTORY",
-                "9556674",
-                "2008",
-                null,
-                "226.80",
-                "FEET",
-                "1691.00",
-                "GRT");
+        mV7.setVesselType("TUNA PURSE SEINER");
+        mV7.setOwner("CRISTINA FISHING CO., LLC");
 
         // ANTHONY G, 1974
         mV8 = new Vessel(
@@ -142,6 +157,8 @@ public class MockData {
                 "84.00",
                 "GRT");
 
+        mV8.setVesselType("TUNA LONGLINER");
+        mV8.setOwner("AO SHIBI INC");
 
         //AOLANI , 2013
         mV9 = new Vessel(
@@ -155,6 +172,10 @@ public class MockData {
                 "102.00",
                 "GRT");
 
+        mV9.setVesselType("TUNA LONGLINER");
+        mV9.setOwner(" \n" +
+                "KD FISHERY LLC");
+
         // APSARA, 1994
         mV10 = new Vessel(
                 "UNITED STATES OF AMERICA",
@@ -166,6 +187,9 @@ public class MockData {
                 "FEET",
                 "183.00",
                 "GRT");
+
+        mV10.setVesselType("TUNA LONGLINER");
+        mV10.setOwner("APSARA LLC");
 
         vessels.add(mV1);
         vessels.add(mV2);
@@ -197,6 +221,8 @@ public class MockData {
                 "7",
                 "GRT");
 
+        mV11.setVesselType("COMMERCIAL FISHING VESSEL");
+
         // EAGLE, 1917, COMMERCIAL FISHING VESSEL
         mV12 = new Vessel(
                 "UNITED STATES OF AMERICA",
@@ -208,6 +234,8 @@ public class MockData {
                 "FEET",
                 "36",
                 "GRT");
+
+        mV12.setVesselType("COMMERCIAL FISHING VESSEL");
 
         // EAGLE, 1948, COMMERCIAL FISHING VESSEL
         mV13 = new Vessel(
@@ -221,6 +249,8 @@ public class MockData {
                 "30",
                 "GRT");
 
+        mV13.setVesselType("COMMERCIAL FISHING VESSEL");
+
         // EAGLE, 1956, COMMERCIAL FISHING VESSEL
         mV14 = new Vessel(
                 "UNITED STATES OF AMERICA",
@@ -232,6 +262,8 @@ public class MockData {
                 "FEET",
                 "10",
                 "GRT");
+
+        mV14.setVesselType("COMMERCIAL FISHING VESSEL");
 
         // EAGLE, 1950, COMMERCIAL FISHING VESSEL
         mV15 = new Vessel(
@@ -245,6 +277,8 @@ public class MockData {
                 "20",
                 "GRT");
 
+        mV15.setVesselType("COMMERCIAL FISHING VESSEL");
+
         // EAGLE, 1956, COMMERCIAL FISHING VESSEL
         mV16 = new Vessel(
                 "UNITED STATES OF AMERICA",
@@ -256,6 +290,8 @@ public class MockData {
                 null,
                 null,
                 null);
+
+        mV16.setVesselType("COMMERCIAL FISHING VESSEL");
 
         // EAGLE, 1961, COMMERCIAL FISHING VESSEL
         mV17 = new Vessel(
@@ -269,6 +305,8 @@ public class MockData {
                 "12",
                 "GRT");
 
+        mV17.setVesselType("COMMERCIAL FISHING VESSEL");
+
         // EAGLE, 1963, COMMERCIAL FISHING VESSEL
         mV18 = new Vessel(
                 "UNITED STATES OF AMERICA",
@@ -280,6 +318,8 @@ public class MockData {
                 "FEET",
                 "27",
                 "GRT");
+
+        mV18.setVesselType("COMMERCIAL FISHING VESSEL");
 
         // EAGLE, 1974, COMMERCIAL FISHING VESSEL
         mV19 = new Vessel(
@@ -293,6 +333,8 @@ public class MockData {
                 "9",
                 "GRT");
 
+        mV19.setVesselType("COMMERCIAL FISHING VESSEL");
+
         // EAGLE, 1975, COMMERCIAL FISHING VESSEL
         mV20 = new Vessel(
                 "UNITED STATES OF AMERICA",
@@ -304,6 +346,8 @@ public class MockData {
                 "FEET",
                 "176",
                 "GRT");
+
+        mV20.setVesselType("COMMERCIAL FISHING VESSEL");
 
         // EAGLE, 1978, COMMERCIAL FISHING VESSEL, OWNER: JOSHUA VILLANI
 
@@ -318,6 +362,8 @@ public class MockData {
                 "13",
                 "GRT");
 
+        mV21.setVesselType("COMMERCIAL FISHING VESSEL");
+
         // EAGLE, 1960, COMMERCIAL FISHING VESSEL
         mV22 = new Vessel(
                 "UNITED STATES OF AMERICA",
@@ -329,6 +375,8 @@ public class MockData {
                 "FEET",
                 "21",
                 "GRT");
+
+        mV22.setVesselType("COMMERCIAL FISHING VESSEL");
 
         // EAGLE, 1979, COMMERCIAL FISHING VESSEL
         mV23 = new Vessel(
@@ -342,6 +390,7 @@ public class MockData {
                 "13",
                 "GRT");
 
+        mV23.setVesselType("COMMERCIAL FISHING VESSEL");
 
         // EAGLE, 1980, COMMERCIAL FISHING VESSEL, OWNER: KENNETH D KRITCHEN
         mV24 = new Vessel(
@@ -355,6 +404,7 @@ public class MockData {
                 "14",
                 "GRT");
 
+        mV24.setVesselType("COMMERCIAL FISHING VESSEL");
 
         // EAGLE, 1983, COMMERCIAL FISHING VESSEL, OWNER: JANE STUBBS
         mV25 = new Vessel(
@@ -368,6 +418,8 @@ public class MockData {
                 "21",
                 "GRT");
 
+        mV25.setVesselType("COMMERCIAL FISHING VESSEL");
+
         // EAGLE, 1997, COMMERCIAL FISHING VESSEL, OWNER: MURPHY J HOPKINS JR
         mV26 = new Vessel(
                 "UNITED STATES OF AMERICA",
@@ -380,6 +432,8 @@ public class MockData {
                 "56",
                 "GRT");
 
+        mV26.setVesselType("COMMERCIAL FISHING VESSEL");
+
         // EAGLE, 2015, COMMERCIAL FISHING VESSEL, OWNER: COVE FISHING CORP
         mV27 = new Vessel(
                 "UNITED STATES OF AMERICA",
@@ -391,6 +445,8 @@ public class MockData {
                 "FEET",
                 "182",
                 "GRT");
+
+        mV27.setVesselType("COMMERCIAL FISHING VESSEL");
 
         vessels.add(mV11);
         vessels.add(mV12);
@@ -440,6 +496,9 @@ public class MockData {
                 "19.00",
                 null);
 
+        mV28.setVesselType("TUNA PURSE SEINER");
+        mV28.setOwner("PIYU TALENTA , PT");
+
         // ABANG JAYA 01, Vessel Type: Tuna longliner, Owner Name: I WAYAN SUDIYANA
         mV29 = new Vessel(
                 "INDONESIA",
@@ -451,6 +510,9 @@ public class MockData {
                 null,
                 "34.00",
                 null);
+
+        mV29.setVesselType("TUNA LONGLINER");
+        mV29.setOwner("I WAYAN SUDIYANA");
 
         // ABLE, Vessel Type: Tuna purse seiner, Owner Name: ARU SAMUDERA LESTARI, PT
         mV30 = new Vessel(
@@ -464,6 +526,9 @@ public class MockData {
                 "235.00",
                 null);
 
+        mV30.setVesselType("TUNA PURSE SEINER");
+        mV30.setOwner("ARU SAMUDERA LESTARI, PT");
+
         // ADS TWO, Vessel Type: Pole and line, Owner Name: PELAYARAN BETA PUTRA DAERAH, PT
         mV31 = new Vessel(
                 "INDONESIA",
@@ -475,6 +540,9 @@ public class MockData {
                 null,
                 "30.00",
                 null);
+
+        mV31.setVesselType("POLE AND LINE");
+        mV31.setOwner("PELAYARAN BETA PUTRA DAERAH, PT");
 
         // AKUA PASIFIK - IV, Vessel Type: Tuna longliner
         mV32 = new Vessel(
@@ -488,10 +556,12 @@ public class MockData {
                 "35.00",
                 null);
 
+        mV32.setVesselType("TUNA LONGLINER");
+
         // ANDREW, Vessel Type: Tuna purse seiner, Owner Name: PIYU TALENTA , PT
         mV33 = new Vessel(
                 "INDONESIA",
-                "ABADI JAYA - 1",
+                "Andrew",
                 null,
                 null,
                 null,
@@ -499,6 +569,9 @@ public class MockData {
                 null,
                 "48.00",
                 null);
+
+        mV33.setVesselType("TUNA PURSE SEINER");
+        mV33.setOwner("PIYU TALENTA , PT");
 
         // ANEKA - 228, Vessel Type: TUNA LONGLINER, Owner Name: BINA NUSA MANDIRI PERTIWI, PT.
         mV34 = new Vessel(
@@ -512,6 +585,8 @@ public class MockData {
                 "84.00",
                 null);
 
+        mV34.setVesselType("TUNA LONGLINER");
+        mV34.setOwner("BINA NUSA MANDIRI PERTIWI, PT");
 
         // ANEKA 202, Vessel Type: Tuna purse seiner, Owner Name: BINA NUSA MANDIRI PERTIWI, PT.
         mV35 = new Vessel(
@@ -525,6 +600,8 @@ public class MockData {
                 "84.00",
                 null);
 
+        mV35.setVesselType("TUNA PURSE SEINER");
+        mV35.setOwner("BINA NUSA MANDIRI PERTIWI, PT");
 
 
         // ANEKA 207,Vessel Type: TUNA LONGLINER, Owner Name: BINA NUSA MANDIRI PERTIWI, PT.
@@ -539,6 +616,8 @@ public class MockData {
                 "61.00",
                 null);
 
+        mV36.setVesselType("TUNA LONGLINER");
+        mV36.setOwner("BINA NUSA MANDIRI PERTIWI, PT");
 
         // ANEKA 209, Vessel Type: TUNA LONGLINER, Owner Name: BINA NUSA MANDIRI PERTIWI, PT.
         mV37 = new Vessel(
@@ -551,6 +630,10 @@ public class MockData {
                 null,
                 "49.00",
                 null);
+
+        mV37.setVesselType("TUNA LONGLINER");
+        mV37.setOwner("BINA NUSA MANDIRI PERTIWI, PT");
+
 
 
         return vessels;
