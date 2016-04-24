@@ -1,6 +1,8 @@
 package com.darrienglasser.goatfish;
 
-public class Vessel {
+import java.io.Serializable;
+
+public class Vessel implements Serializable {
     /** Country. */
     private String flag;
     /** Vessel name. */
@@ -19,6 +21,10 @@ public class Vessel {
     private String tonnage;
     /** Tonnage type. */
     private String tonnageType;
+    /** Owner. */
+    private String owner;
+    /** Vessel Type. */
+    private String vesselType;
 
     public Vessel(
             String flag,
@@ -112,5 +118,21 @@ public class Vessel {
 
     public void setTonnageType(String tonnageType) {
         this.tonnageType = tonnageType;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
+    public String getVesselType() {
+        return vesselType;
+    }
+
+    public void setVesselType(String vesselType) {
+        this.vesselType = vesselType;
     }
 }

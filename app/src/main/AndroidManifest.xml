@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".AdvancedSearchActivity" />
         <activity android:name=".SimpleResultsActivity" />
+        <activity android:name=".ExpandedView"></activity>
     </application>
 
 </manifest>
