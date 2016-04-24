@@ -11,23 +11,20 @@ public class MockData {
 
 
     // Flag : United States of America
+    // Inclusion criteria: First 10 entries
+    // Source: Western & Central Pacific Fisheries Commission
     Vessel mV1, mV2, mV3, mV4, mV5, mV6, mV7, mV8, mV9, mV10;
 
+    // Flag : United States of America
+    // Search name: "Eagle"
+    // Inclusion criteria: COMMERCIAL FISHING VESSEL
+    // Source:  http://www.st.nmfs.noaa.gov/st1/CoastGuard/VesselByName.html
     Vessel mV11, mV12, mV13, mV14, mV15, mV16, mV17, mV18, mV19, mV20, mV21, mV22, mV23, mV24, mV25, mV26, mV27;
 
-
-     /*
-    public Vessel(
-    String flag,
-    String name,
-    String imo,
-    String year,
-    String uvi,
-    String length,
-    String lengthUnits,
-    String tonnage,
-    String tonnageType)
-    */
+    // Flag : Indonesia
+    // Inclusion criteria: First 10 entries
+    // Source: Western & Central Pacific Fisheries Commission
+    Vessel mV28, mV29, mV30, mV31, mV32, mV33, mV34, mV35, mV36, mV37;
 
     public ArrayList<Vessel> getMockVesselList() {
 
@@ -48,10 +45,6 @@ public class MockData {
                 "FEET",
                 "148.00",
                 "GRT");
-
-
-
-
 
         // ALANA, 2013
         mV2 = new Vessel(
@@ -243,7 +236,7 @@ public class MockData {
         // EAGLE, 1950, COMMERCIAL FISHING VESSEL
         mV15 = new Vessel(
                 "UNITED STATES OF AMERICA",
-                "EAGLE ",
+                "EAGLE",
                 null,
                 "1911",
                 null,
@@ -255,7 +248,7 @@ public class MockData {
         // EAGLE, 1956, COMMERCIAL FISHING VESSEL
         mV16 = new Vessel(
                 "UNITED STATES OF AMERICA",
-                "EAGLE ",
+                "EAGLE",
                 null,
                 "1956",
                 null,
@@ -267,7 +260,7 @@ public class MockData {
         // EAGLE, 1961, COMMERCIAL FISHING VESSEL
         mV17 = new Vessel(
                 "UNITED STATES OF AMERICA",
-                "EAGLE ",
+                "EAGLE",
                 null,
                 "1961",
                 null,
@@ -279,7 +272,7 @@ public class MockData {
         // EAGLE, 1963, COMMERCIAL FISHING VESSEL
         mV18 = new Vessel(
                 "UNITED STATES OF AMERICA",
-                "EAGLE ",
+                "EAGLE",
                 null,
                 "1963",
                 null,
@@ -291,7 +284,7 @@ public class MockData {
         // EAGLE, 1974, COMMERCIAL FISHING VESSEL
         mV19 = new Vessel(
                 "UNITED STATES OF AMERICA",
-                "EAGLE ",
+                "EAGLE",
                 null,
                 "1974",
                 null,
@@ -416,6 +409,148 @@ public class MockData {
         vessels.add(mV25);
         vessels.add(mV26);
         vessels.add(mV27);
+
+        /* Source: Western & Central Pacific Fisheries Commission
+        *  https://www.wcpfc.int/record-fishing-vessel-database
+        */
+        // Flag : Indonesia
+        // Inclusion criteria: First 10 entries
+
+        /*     public Vessel(
+        String flag,
+        String name,
+        String imo,
+        String year,
+        String uvi,
+        String length,
+        String lengthUnits,
+        String tonnage,
+        String tonnageType)
+        */
+
+        // ABADI JAYA - 1, Vessel Type: Tuna purse seiner, Owner Name: PIYU TALENTA , PT
+        mV28 = new Vessel(
+                "INDONESIA",
+                "ABADI JAYA - 1",
+                null,
+                null,
+                null,
+                null,
+                null,
+                "19.00",
+                null);
+
+        // ABANG JAYA 01, Vessel Type: Tuna longliner, Owner Name: I WAYAN SUDIYANA
+        mV29 = new Vessel(
+                "INDONESIA",
+                "ABANG JAYA 01",
+                null,
+                null,
+                null,
+                null,
+                null,
+                "34.00",
+                null);
+
+        // ABLE, Vessel Type: Tuna purse seiner, Owner Name: ARU SAMUDERA LESTARI, PT
+        mV30 = new Vessel(
+                "INDONESIA",
+                "ABLE",
+                null,
+                null,
+                null,
+                null,
+                null,
+                "235.00",
+                null);
+
+        // ADS TWO, Vessel Type: Pole and line, Owner Name: PELAYARAN BETA PUTRA DAERAH, PT
+        mV31 = new Vessel(
+                "INDONESIA",
+                "ADS TWO",
+                null,
+                null,
+                null,
+                null,
+                null,
+                "30.00",
+                null);
+
+        // AKUA PASIFIK - IV, Vessel Type: Tuna longliner
+        mV32 = new Vessel(
+                "INDONESIA",
+                "AKUA PASIFIK - IV",
+                null,
+                null,
+                null,
+                null,
+                null,
+                "35.00",
+                null);
+
+        // ANDREW, Vessel Type: Tuna purse seiner, Owner Name: PIYU TALENTA , PT
+        mV33 = new Vessel(
+                "INDONESIA",
+                "ABADI JAYA - 1",
+                null,
+                null,
+                null,
+                null,
+                null,
+                "48.00",
+                null);
+
+        // ANEKA - 228, Vessel Type: TUNA LONGLINER, Owner Name: BINA NUSA MANDIRI PERTIWI, PT.
+        mV34 = new Vessel(
+                "INDONESIA",
+                "ANEKA - 228",
+                null,
+                null,
+                null,
+                null,
+                null,
+                "84.00",
+                null);
+
+
+        // ANEKA 202, Vessel Type: Tuna purse seiner, Owner Name: BINA NUSA MANDIRI PERTIWI, PT.
+        mV35 = new Vessel(
+                "INDONESIA",
+                "ANEKA 202",
+                null,
+                null,
+                null,
+                null,
+                null,
+                "84.00",
+                null);
+
+
+
+        // ANEKA 207,Vessel Type: TUNA LONGLINER, Owner Name: BINA NUSA MANDIRI PERTIWI, PT.
+        mV36 = new Vessel(
+                "INDONESIA",
+                "ANEKA 207",
+                null,
+                null,
+                null,
+                null,
+                null,
+                "61.00",
+                null);
+
+
+        // ANEKA 209, Vessel Type: TUNA LONGLINER, Owner Name: BINA NUSA MANDIRI PERTIWI, PT.
+        mV37 = new Vessel(
+                "INDONESIA",
+                "ANEKA 209",
+                null,
+                null,
+                null,
+                null,
+                null,
+                "49.00",
+                null);
 
 
         return vessels;
