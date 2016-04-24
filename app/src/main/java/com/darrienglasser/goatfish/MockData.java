@@ -26,6 +26,8 @@ public class MockData {
     // Source: Western & Central Pacific Fisheries Commission
     Vessel mV28, mV29, mV30, mV31, mV32, mV33, mV34, mV35, mV36, mV37;
 
+    Vessel mV38, mV39, mV40, mV41, mV42, mV43, mV44, mV45, mV46, mV47, mV48, mV49, mV50;
+
     public ArrayList<Vessel> getMockVesselList() {
 
         ArrayList<Vessel> vessels = new ArrayList<>();
@@ -635,6 +637,109 @@ public class MockData {
         mV37.setOwner("BINA NUSA MANDIRI PERTIWI, PT");
 
 
+        // Source: WCPFC (see above)
+        // Inclusion criteria: Pseudo-random
+
+        mV38 = new Vessel(
+                "AUSTRALIA",
+                "ANNE MARIE IV",
+                null,
+                "1973",
+                null,
+                "17.00",
+                "METERS",
+                "40.00",
+                "GRT");
+
+        mV38.setVesselType("HANDLINER");
+        mV38.setOwner("GRAY, KEVIN J");
+
+        mV39 = new Vessel(
+                "AUSTRALIA",
+                "ANNE MARIE V",
+                null,
+                "2013",
+                null,
+                "20.70",
+                "METERS",
+                "80.00",
+                "GRT");
+
+        mV39.setVesselType("HANDLINER");
+        mV39.setOwner("GRAY, KEVIN J");
+
+        mV40 = new Vessel(
+                "AUSTRALIA",
+                "NIGHT SKY",
+                null,
+                "1996",
+                null,
+                "5.64",
+                "METERS",
+                "1.50",
+                "GRT");
+
+        mV40.setVesselType("GILLNETTER");
+        mV40.setOwner("STEVENSON, GRAHAM A,\n STEVENSON, MARGARET J");
+
+        mV41 = new Vessel(
+                "CHINA",
+                "SUNSTAR 6",
+                null,
+                "2010",
+                null,
+                "37.25",
+                "METERS",
+                "242.00",
+                "GRT");
+
+        mV41.setOwner("DALIAN JINGUANG FISHERY CO.,LTD.");
+        mV41.setVesselType("LONGLINER");
+
+        mV42 = new Vessel(
+                "CHINA",
+                "ZHONG RONG 13",
+                null,
+                "2009",
+                null,
+                "35.16",
+                "METERS",
+                "219.00",
+                "GRT");
+
+        mV42.setOwner("RONGCHENG OCEAN FISHERY CO., LTD");
+        mV42.setVesselType("LONGLINER");
+
+        mV43 = new Vessel(
+                "THAILAND",
+                "MARINE ONE",
+                "7721067",
+                "1978",
+                null,
+                "96.45",
+                "METERS",
+                "2689.00",
+                "GRT");
+
+        mV43.setOwner("SILVER SEA MARINE CO.,LTD.");
+        mV43.setVesselType("FISH CARRIER");
+
+        vessels.add(mV28);
+        vessels.add(mV29);
+        vessels.add(mV30);
+        vessels.add(mV31);
+        vessels.add(mV32);
+        vessels.add(mV33);
+        vessels.add(mV34);
+        vessels.add(mV35);
+        vessels.add(mV36);
+        vessels.add(mV37);
+        vessels.add(mV38);
+        vessels.add(mV39);
+        vessels.add(mV40);
+        vessels.add(mV41);
+        vessels.add(mV42);
+        vessels.add(mV43);
 
         return vessels;
 
