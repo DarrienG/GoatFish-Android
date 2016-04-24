@@ -22,6 +22,6 @@
     <string name="country">Country: %1$s</string>
     <string name="imo">IMO: %1$s</string>
     <string name="uvi">UVI: %1$s</string>
-    <string name="length">Length: %1$s %1$s</string>
+    <string name="length">Length: %1$s%2$s</string>
 
 </resources>
