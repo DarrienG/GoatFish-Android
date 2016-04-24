@@ -21,7 +21,7 @@
     <!-- Row data. -->
     <string name="vessel_name">Vessel: %1$s</string>
     <string name="owner">Owner: %1$s</string>
-    <string name="year">Year: %1$s</string>
+    <string name="year">Build Year: %1$s</string>
     <string name="country">Country: %1$s</string>
     <string name="imo">IMO: %1$s</string>
     <string name="uvi">UVI: %1$s</string>
