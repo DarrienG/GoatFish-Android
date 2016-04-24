@@ -88,7 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="175dp"
+                android:layout_marginTop="100dp"
                 android:clickable="true"
                 android:src="@drawable/ic_forward_icon" />
 

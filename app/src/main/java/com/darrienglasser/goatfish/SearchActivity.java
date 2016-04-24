@@ -43,7 +43,6 @@ public class SearchActivity extends AppCompatActivity {
             public boolean onQueryTextSubmit(String query) {
                 Intent intent = new Intent(SearchActivity.this, ResultsActivity.class);
                 startActivity(intent);
-                finish();
                 return false;
             }
 
