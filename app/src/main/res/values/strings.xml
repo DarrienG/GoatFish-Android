@@ -19,14 +19,16 @@
     <string name="expanded_data">expanded_data</string>
 
     <!-- Row data. -->
-    <string name="vessel_name">Vessel: %1$s</string>
+    <string name="vessel_name">%1$s</string>
     <string name="owner">Owner: %1$s</string>
     <string name="year">Build Year: %1$s</string>
     <string name="country">Country: %1$s</string>
     <string name="imo">IMO: %1$s</string>
     <string name="uvi">UVI: %1$s</string>
-    <string name="length">Length: %1$s%2$s</string>
-    <string name="tonnage">Tonnage: %1$s%2$s</string>
+    <string name="length">Length: %1$s %2$s</string>
+    <string name="tonnage">Tonnage: %1$s %2$s</string>
+    <string name="vessel_stats">Vessel Stats:</string>
+
 
     <!-- Simple search strings -->
     <string name="no_results">No results found, try searching again</string>

@@ -36,10 +36,10 @@ public class ExpandedView extends AppCompatActivity {
             nameStr = "No name";
         }
         if (yearStr == null) {
-            yearStr = "Unknown construction year";
+            yearStr = "Unknown";
         }
         if (lenStr == null) {
-            lenStr = "No known length";
+            lenStr = "Unknown";
         }
         if (flagString == null) {
             flagString = "Unknown";
@@ -48,10 +48,10 @@ public class ExpandedView extends AppCompatActivity {
             lenUnits = "";
         }
         if (imoStr == null) {
-            imoStr = "No known IMO";
+            imoStr = "Unknown";
         }
         if (uviStr == null) {
-            uviStr = "No known UVI";
+            uviStr = "Unknown";
         }
         if (tonnageStr == null) {
             tonnageStr = "Unknown";
