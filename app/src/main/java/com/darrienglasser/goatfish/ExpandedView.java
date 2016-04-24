@@ -1,8 +1,10 @@
 package com.darrienglasser.goatfish;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ExpandedView extends AppCompatActivity {
@@ -20,6 +22,8 @@ public class ExpandedView extends AppCompatActivity {
         TextView uvi = (TextView) findViewById(R.id.uvi);
         TextView tonnage = (TextView) findViewById(R.id.tonnage);
         TextView owner = (TextView) findViewById(R.id.owner);
+        ImageView view = (ImageView) findViewById(R.id.flagImg);
+        view.setVisibility(View.GONE);
 
         String nameStr = v.getName();
         String yearStr = v.getYear();
@@ -77,6 +81,11 @@ public class ExpandedView extends AppCompatActivity {
         uvi.setText(String.format(getString(R.string.uvi), uviStr));
         tonnage.setText(String.format(getString(R.string.tonnage), tonnageStr, tonnageTypeStr));
         owner.setText(String.format(getString(R.string.owner    ), ownerStr));
+
+        if (flagString.contains("STATES")) {
+            view.setImageResource(R.drawable.america_flag);
+            view.setVisibility(View.VISIBLE);
+        }
 
 
     }
