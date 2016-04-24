@@ -14,6 +14,7 @@
     <string name="country_text">Country</string>
 
     <!-- Data intent retrieval strings. -->
+    <string name="simple_query">simple_query</string>
     <string name="search_data">search_data</string>
 
     <!-- Row data. -->
@@ -23,5 +24,10 @@
     <string name="imo">IMO: %1$s</string>
     <string name="uvi">UVI: %1$s</string>
     <string name="length">Length: %1$s%2$s</string>
+    <string name="tonnage">Length: %1$s%2$s</string>
+
+    <!-- Simple search strings -->
+    <string name="no_results">No results found, try searching again</string>
+    <string name="return_search">Search Again</string>
 
 </resources>

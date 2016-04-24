@@ -2,6 +2,7 @@ package com.darrienglasser.goatfish;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -9,36 +10,38 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class CardListAdapter extends ArrayAdapter<ResultsMicroGroup> {
+public class CardListAdapter extends ArrayAdapter<Vessel> {
     public CardListAdapter(Context context, int textViewResourceId) {
         super(context, textViewResourceId);
     }
 
-    public CardListAdapter(Context context, int resource, List<ResultsMicroGroup> items) {
+    public CardListAdapter(Context context, int resource, List<Vessel> items) {
         super(context, resource, items);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Resources res = Resources.getSystem();
-        ResultsMicroGroup group = getItem(position);
-        TextView vesselView = (TextView) convertView.findViewById(R.id.vessel_name);
-        TextView yearView = (TextView) convertView.findViewById(R.id.year);
-        TextView countryView = (TextView) convertView.findViewById(R.id.country);
-        TextView imoView = (TextView) convertView.findViewById(R.id.imo);
-        TextView uviView = (TextView) convertView.findViewById(R.id.uvi);
-        TextView lengthView = (TextView) convertView.findViewById(R.id.length);
-        vesselView.setText(String.format(res.getString(R.string.vessel_name), group.getName()));
-        yearView.setText(String.format(res.getString(R.string.year), group.getYear()));
-        countryView.setText(String.format(res.getString(R.string.country), group.getCountry()));
-        imoView.setText(String.format(res.getString(R.string.imo), group.getImo()));
-        uviView.setText(String.format(res.getString(R.string.uvi), group.getUvi()));
+        LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(
+                Context.LAYOUT_INFLATER_SERVICE);
+        View v = inflater.inflate(R.layout.results_row, parent, false);
+        Resources res = getContext().getResources();
+        Vessel vessel = getItem(position);
+        TextView vesselView = (TextView) v.findViewById(R.id.vessel_name);
+        TextView yearView = (TextView) v.findViewById(R.id.year);
+        TextView lengthView = (TextView) v.findViewById(R.id.length);
+        TextView tonnageView = (TextView) v.findViewById(R.id.tonnage);
+        vesselView.setText(String.format(res.getString(R.string.vessel_name), vessel.getName()));
+        yearView.setText(String.format(res.getString(R.string.year), vessel.getYear()));
         lengthView.setText(
                 String.format(
                         res.getString(R.string.length),
-                        group.getLength(),
-                        group.getUnits()));
-
-        return convertView;
+                        vessel.getLength(),
+                        vessel.getLengthUnits()));
+        tonnageView.setText(
+                String.format(
+                        res.getString(R.string.tonnage),
+                        vessel.getTonnage(),
+                        vessel.getTonnageType()));
+        return v;
     }
 }
