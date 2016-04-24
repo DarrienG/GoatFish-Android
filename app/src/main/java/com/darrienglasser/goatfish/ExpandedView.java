@@ -63,6 +63,8 @@ public class ExpandedView extends AppCompatActivity {
             ownerStr = "Unknown";
         }
 
+        setTitle(nameStr);
+
         vessel.setText(String.format(getString(R.string.vessel_name), nameStr));
         year.setText(String.format(getString(R.string.year), yearStr));
         length.setText(
