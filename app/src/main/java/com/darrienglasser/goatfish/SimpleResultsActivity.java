@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class SimpleResultsActivity extends AppCompatActivity {
         }
         name = name.toUpperCase();
         setTitle(name);
-        ArrayList<Vessel> filteredVessel = new ArrayList<>();
+        final ArrayList<Vessel> filteredVessel = new ArrayList<>();
         ArrayList<Vessel> mockDataList = data.getMockVesselList();
         for (Vessel v: mockDataList) {
             if (v != null && v.getName() != null && v.getName().contains(name)) {
@@ -40,6 +41,15 @@ public class SimpleResultsActivity extends AppCompatActivity {
         mCardView = (ListView) findViewById(R.id.card_view);
         mCardView.setAdapter(
                 new CardListAdapter(this, R.layout.results_row, filteredVessel));
+
+        mCardView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(SimpleResultsActivity.this, ExpandedView.class);
+                intent.putExtra(getString(R.string.expanded_data) ,filteredVessel.get(position));
+                startActivity(intent);
+            }
+        });
 
     }
 
