@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AdvancedSearchActivity" />
-        <activity android:name=".ResultsActivity" />
+        <activity android:name=".SimpleResultsActivity" />
     </application>
 
 </manifest>
