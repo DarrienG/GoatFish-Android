@@ -1,7 +1,6 @@
 package com.darrienglasser.goatfish;
 
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,11 +24,6 @@ public class AdvancedSearchActivity extends AppCompatActivity {
      */
     private EditText mGearView;
 
-    /**
-     * Country.
-     */
-    private EditText mCountryView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +33,7 @@ public class AdvancedSearchActivity extends AppCompatActivity {
 
         mLetteringView = (EditText) findViewById(R.id.lettering_view);
         mPermitView = (EditText) findViewById(R.id.permit_view);
-        mGearView = (EditText) findViewById(R.id.gear_view);
-        mCountryView = (EditText) findViewById(R.id.flagView);
+        mGearView = (EditText) findViewById(R.id.imo_view);
 
         View v = findViewById(R.id.forward_button);
         if (v != null)
@@ -61,12 +54,24 @@ public class AdvancedSearchActivity extends AppCompatActivity {
         SearchDataContainer container = new SearchDataContainer(
                 mLetteringView.getText().toString(),
                 mPermitView.getText().toString(),
-                mGearView.getText().toString(),
-                mCountryView.getText().toString()
+                mGearView.getText().toString()
+
         );
 
-        Intent intent = new Intent(AdvancedSearchActivity.this, ResultsActivity.class);
-        intent.putExtra(getString(R.string.search_data), container);
+        if (container.getImo() == null && container.getUvi() == null) {
+            String simpleSearchQuery = container.getName();
+            Intent intent = new Intent(AdvancedSearchActivity.this, SimpleResultsActivity.class);
+            if (simpleSearchQuery == null) {
+                simpleSearchQuery = "";
+            }
+
+            intent.putExtra(getString(R.string.simple_query), simpleSearchQuery);
+        }
+
+        Intent intent = new Intent(AdvancedSearchActivity.this, SimpleResultsActivity.class);
+        // TODO: Activate advanced search
+//        intent.putExtra(getString(R.string.search_data), container);
+        intent.putExtra(getString(R.string.simple_query), container.getName());
         startActivity(intent);
     }
 }
